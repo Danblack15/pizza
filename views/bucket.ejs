@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/header.css">
+    <link rel="stylesheet" href="/public/css/bucket.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="/public/scripts/jquery.cookie.js"></script>
+    <script src="/public/scripts/bucket.js"></script>
+    <title>Корзина</title>
+</head>
+<body>
+    <div class="modal_zakaz">
+        <div class="enter_modal_zakaz">
+            <p class="name_modal">Оформление заказа</p>
+            <form action="/zakaz" method="post" class="formis">
+                <div>
+                    <input type="text" name="Name" placeholder="Имя" required class="inp1">
+                    <input type="text" name="Surname" placeholder="Фамилия" required class="inp2">
+                </div>
+                <div>
+                    <input type="tel" name="Tel" placeholder="Номер телефона" required class="inp3">
+                    <input type="email" name="Email" placeholder="email" class="inp4">
+                </div>
+                <div>
+                    <div>
+                        <input type="text" name="Street" placeholder="Улица" required class="inp5">
+                        <input type="text" name="House" placeholder="Номер дома" required class="inp6">
+                    </div>
+                    <div>
+                        <input type="text" name="Podezd" placeholder="Подъезд" required class="inp7">
+                        <input type="text" name="Door" placeholder="Квартира" required class="inp8">
+                    </div>
+                </div>
+                <div class="wrapper_textarea">
+                    <textarea type="text" name="Dop_text" placeholder="Пожелание к заказу"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Заказать" class="submit_zakaz">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="header_menu_2">
+        <div class="logo_block" id="d_h_m_2">
+            <img src="/public/svg/pizza.svg">
+        </div>
+        <div class="menu" id="d_h_m_2">
+            <ul>
+                <a href="/">
+                    <li>Меню</li>
+                </a>
+                <a href="/contacts">
+                    <li>Контакты</li>
+                </a>
+                <a href="/bucket">
+                    <li>Корзина</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+    <section>
+        <div class="name_company">
+            <p>Pizza Wow.</p>
+        </div>
+        <div class="block_1">
+            <div class="name_block">
+                <p>Ваш заказ</p>
+            </div>
+            <div>
+                <div class="enter_pop_buc">
+
+                </div>
+                <div class="general_info_price">
+                    <div>
+                        <p>Итог:</p>
+                        <p class="money">цена</p>
+                    </div>
+                    <input type="submit" value="заказать" class="pay_open">
+                </div>
+            </div>
+        </div>
+    </section>
+    <%- include ('blocks/footer'); -%>
+</body>
+</html>

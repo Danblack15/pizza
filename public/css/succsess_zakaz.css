@@ -1,0 +1,227 @@
+.open_bucket{
+    display: flex;
+    transform: rotate(90deg);
+    transition: 0.1s;
+}
+.open_bucket a{
+    width: 100px;
+    transform: translateY(48px);
+    font-weight: bold;
+    background: orangered;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    transition: 0.1s;
+}
+.open_bucket a:hover{
+    transform: translateY(45px) scale(1.1);
+    transition: 0.1s;
+}
+.bucket{
+    display: flex;
+    justify-content: flex-end;
+}
+.buck{
+    cursor: pointer;
+}
+.buck:hover{
+    background: #d1d1d1;
+}
+.wrap_buc{
+    display: inline-flex;
+    align-items: center;
+    font-size: 25px;
+    height: 100%;
+}
+.wrap_buc p{
+    margin: 0 5px;
+}
+.money{
+    transform: translateX(-100px);
+}
+.pop_up_buc{
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    right: 0;
+    top: 0;
+    margin: 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.enter_pop_buc{
+    width: 550px;
+    height: 450px;
+    background: #ededed;
+    box-shadow: -5px 5px 10px 0px #9c9c9c;
+    display: block;
+    overflow-Y: scroll;
+}
+.enter_pop_buc::-webkit-scrollbar{
+    width: 10px;
+    
+}
+.enter_pop_buc::-webkit-scrollbar-button {
+    display: none;
+    
+}
+.enter_pop_buc::-webkit-scrollbar-track {
+    background: orangered;
+    
+}
+.enter_pop_buc::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color:black;
+}
+.open_bucket{
+    display: flex;
+    transform: rotate(90deg);
+    transition: 0.1s;
+}
+.open_bucket a{
+    width: 100px;
+    transform: translateY(48px);
+    font-weight: bold;
+    background: orangered;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    transition: 0.1s;
+}
+.open_bucket a:hover{
+    transform: translateY(45px) scale(1.1);
+    transition: 0.1s;
+}
+
+.wrapper{
+    width:100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.anim_text{
+    font-size: 65px;
+    color: orangered;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    background: linear-gradient(45deg, #ff4d00 33%, #ffb700 66%, #cf0);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation-name: b_p;
+  animation-duration: 2.5s;
+  animation-timing-function: ease;
+  animation-delay: 0.3s;
+  animation-iteration-count: infinite;
+}
+@keyframes b_p {
+    0%{ 
+        background-size: 100%;
+        background-position: center;
+    }
+    25%{
+        background-size: 150%;
+        background-position: right;
+    }
+    75%{
+        background-size: 150%;
+        background-position: left;
+    }
+    100%{
+        background-size: 100%;
+        background-position: center;
+    }
+}
+.wrapper p:nth-child(2){
+    font-size: 27px;
+    color: orangered;
+}
+.stars{
+    width: 800px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.stars img{
+    max-width: 10%;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: .25s ease;
+    filter: contrast(40%);
+}
+.stars img:hover{
+    transform: scale(1.3);
+    transition: .25s ease;
+    filter: contrast(200%);
+}
+.st{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thnks{
+    display: none;
+    position: absolute;
+}
+.thnks p{
+    background: linear-gradient(45deg, blue 33%, #ffb700 66%, #cf0);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 50px;
+
+  animation-name: thnks;
+  animation-duration: 2.5s;
+  animation-timing-function: ease;
+  animation-delay: 0.3s;
+  animation-iteration-count: infinite;
+  
+}
+@keyframes thnks {
+    0%{ 
+        background-size: 100%;
+        background-position: center;
+    }
+    25%{
+        background-size: 150%;
+        background-position: right;
+    }
+    75%{
+        background-size: 150%;
+        background-position: left;
+    }
+    100%{
+        background-size: 100%;
+        background-position: center;
+    }
+}
+
+
+body::-webkit-scrollbar{
+    width: 10px;
+    
+}
+body::-webkit-scrollbar-button {
+    display: none;
+    
+}
+body::-webkit-scrollbar-track {
+    background: black;
+    
+}
+body::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color:orangered;
+
+}

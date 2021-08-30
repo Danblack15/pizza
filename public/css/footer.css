@@ -1,0 +1,22 @@
+footer{
+    max-width: 100vw;
+    height: 50px;
+    background: linear-gradient(45deg, #cf0 10%, #ffb700 ,  orangered 66%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+footer div{
+    margin: 0 50px;
+}
+footer div:nth-child(2) p{
+    font-weight: 100;
+    font-size: 35px;
+    font-family: 'Caveat', cursive;
+}
+footer a{
+    cursor: pointer;
+}

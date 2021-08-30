@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/header.css">
+    <link rel="stylesheet" href="../public/css/succsess_zakaz.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="../public/scripts/jquery.cookie.js"></script>
+    <title>Успешно</title>
+</head>
+<body>
+    <%- include ('blocks/header'); -%>
+
+    <div class="wrapper">
+        <p class="anim_text">
+            Ваш заказ отправлен!
+        </p>
+        <p>
+            В течении 15 минут с вами свяжется наш сотрудник.
+        </p>
+        <div class="stars">
+            <div class="st">
+                <img src="../public/img/star.ico" id="1">
+                <img src="../public/img/star.ico" id="2">
+                <img src="../public/img/star.ico" id="3">
+                <img src="../public/img/star.ico" id="4">
+                <img src="../public/img/star.ico" id="5">
+            </div>
+            <div class="thnks">
+                <p>Спасибо за отзыв</p>
+            </div>
+        </div>
+    </div>
+
+    <%- include ('blocks/footer'); -%>
+    <script>
+        $('.pop_up_buc').fadeOut(0);
+        $('.buck').click(() => {
+
+            $('.pop_up_buc').fadeToggle('fast');
+        });
+
+        $(document).on('click', '.plus', (e) => {
+        parent = $(e.currentTarget).parent();
+        parent_4 = $(e.currentTarget).parent().parent().parent().parent();
+        parent_5 = $(e.currentTarget).parent().parent().parent().parent().parent();
+
+        let colvo = parent.find('.colvo').text(),
+            colvo_text = parent.find('.colvo'),
+            price = parent_4.find('.mon_p').text(),
+            price_text = parent_4.find('.mon_p');
+        colvo = Number(colvo);
+        price = Number(price);
+        let price_inc = price;
+        price = price / colvo;
+
+
+        colvo++;
+        price_inc = price_inc + price;
+        $(colvo_text).text(colvo);
+        $(price_text).text(price_inc);
+
+        let id = $(parent_4).attr('id');
+        let inf =$('.line_pop_up:nth-child('+id+')').html();
+        $.cookie('P'+id+'', inf);
+
+        let summ = 0;
+        let c = $('.mon_p');
+        for (let i = 0; i <= $('.mon_p').length-1; i++) {
+            a = $(c[i]).text();
+            a = Number(a);
+            summ=summ+a;
+            
+        }
+        $('.money').text(summ+' руб.');
+    });
+
+    $(document).on('click', '.minus', (e) => {
+        parent = $(e.currentTarget).parent();
+        parent_4 = $(e.currentTarget).parent().parent().parent().parent();
+        parent_5 = $(e.currentTarget).parent().parent().parent().parent().parent();
+
+        let colvo = parent.find('.colvo').text(),
+            colvo_text = parent.find('.colvo');
+        price = parent_4.find('.mon_p').text(),
+            price_text = parent_4.find('.mon_p');
+        colvo = Number(colvo);
+        price = Number(price);
+        let price_inc = price;
+        price = price / colvo;
+
+        if (colvo > 1) {
+            colvo--;
+            $(colvo_text).text(colvo);
+
+            price_inc = price_inc - price;
+            $(price_text).text(price_inc);
+
+            let id = $(parent_4).attr('id');
+        let inf = $(parent_5).find('.line_pop_up:nth-child('+id+')').html();
+        $.cookie('P'+id+'', inf);
+
+            let summ = 0;
+            let c = $('.mon_p');
+            for (let i = 0; i <= $('.mon_p').length-1; i++) {
+                a = $(c[i]).text();
+                a = Number(a);
+                summ=summ+a;
+                
+            }
+            $('.money').text(summ+' руб.');            
+        }
+    });
+
+    $(document).on('click', '.del', (e) => {
+        let parent = $(e.currentTarget).parent().parent().parent();
+        let id = $(parent).attr('id');
+
+        $.cookie('P'+id+'', null);
+           
+        parent.detach();
+        let summ = 0;
+            let c = $('.mon_p');
+            for (let i = 0; i <= $('.mon_p').length-1; i++) {
+                a = $(c[i]).text();
+                a = Number(a);
+                summ=summ+a;
+                
+            }
+            $('.money').text(summ+' руб.');   
+    });
+
+    //COOKIES
+
+    for (let i = 1; i < 27; i++) {
+        let inf = $.cookie('P'+i+'');
+        if (inf !== null){
+            //console.log(inf);
+         $(`<div class="line_pop_up" id="`+i+`">`+inf+`</div>`).appendTo($('.enter_pop_buc'));
+        }
+    }
+
+    function cena(){
+        let summ = 0;
+        let c = $('.mon_p');
+        for (let i = 0; i <= $('.mon_p').length-1; i++) {
+            a = $(c[i]).text();
+            a = Number(a);
+            summ=summ+a;
+            
+        }
+        $('.money').text(summ+' руб.');
+    }
+    cena();
+
+    $('.stars img').click(function(e){
+        id = $(e.target).attr('id');
+
+        for (let i = 0; i <=  id; i++) {
+            $('.stars img:nth-child('+i+')').css({
+                'transform':'scale(1.3)',
+                'filter':'contrast(200%)'
+            })
+        }
+        $('.st').fadeOut(1000);
+        $('.thnks').delay(800).fadeIn();
+
+        $.cookie('Dop', null);
+
+        function href(){
+            window.location.replace('/');
+        }
+        
+        setTimeout(href, 1500);
+    });
+    </script>
+</body>
+</html>

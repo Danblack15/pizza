@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <script src="public/scripts/jquery.cookie.js"></script>
+    <script src="/public/scripts/main.js"></script>
+    <title>Главная</title>
+</head>
+
+<body>
+    <div class="modal_pizza">
+        <div class="wrapper_modal_pizza">
+            <div class="pizza_img">
+
+            </div>
+            <div class="selector">
+                <div class="modal_general_info">
+
+                </div>
+                <ul class="size_pizza">
+                    <li id="small_p">Маленькая</li>
+                    <li id="medium_p">Средняя</li>
+                    <li id="higth_p">Большая</li>
+                </ul>
+                <ul class="testo">
+                    <li id="low_t">Тонкое</li>
+                    <li id="fat_t">Пышное</li>
+                </ul>
+                <input type="submit" value="Добавить в корзину" class="in_bucket">
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="header_menu">
+            <div class="logo_block">
+                <img src="/public/svg/pizza.svg">
+            </div>
+            <div class="menu">
+                <ul>
+                    <a href="/">
+                        <li>Меню</li>
+                    </a>
+                    <a href="/contacts">
+                        <li>Контакты</li>
+                    </a>
+                    <a href="/bucket">
+                        <li>Корзина</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="content_header">
+            <p class="big_name_header">Pizza <span class="wow">Wow</span>.</p>
+        </div>
+    </header>
+    <section>
+        <div class="header_menu_2">
+            <div class="logo_block" id="d_h_m_2">
+                <img src="/public/svg/pizza.svg">
+            </div>
+            <div class="menu" id="d_h_m_2">
+                <ul>
+                    <a href="/">
+                        <li>Меню</li>
+                    </a>
+                    <a href="/contacts">
+                        <li>Контакты</li>
+                    </a>
+                    <a href="/bucket">
+                        <li>Корзина</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="bucket" id="d_h_m_2">
+                <a class="buck">
+                    <span class="wrap_buc">
+                        <p>Корзина</p>
+                        <p><img src="/public/svg/busket.svg" class="busket_img"></p>
+                        <p class="money">цена</p>
+                    </span>
+                </a>
+                <div class="pop_up_buc">
+                    <span class="enter_pop_buc">
+
+                    </span>
+                    <span class="open_bucket">
+                        <a href="/bucket">К заказу</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="block_1">
+            <p class="name_block_1">Пицца</p>
+            <div class="pizza_block">
+                <div class="pizza_line">
+                    <div class="pizz">
+                        <div class="click_box">
+                            <span class="select_pizz"></span>
+                            <img class="img_pizza" src="/public/img/p1.jpg">
+                        </div>
+                        <div>
+                            <span>
+                                <h2>Мексиканская!</h2>
+                                <p class="wrap_span"><span class="price_p">390</span>руб.</p>
+                            </span>
+                            <p class="opis">Шампиньоны, томаты, сладкий перец, красный лук, маслины, кубики брынзы,
+                                моцарелла, томатный соус, итальянские травы
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pizz">
+                        <div class="click_box">
+                            <span class="select_pizz"></span>
+                            <img class="img_pizza"
+                                src="https://i.mycdn.me/i?r=AzEPZsRbOZEKgBhR0XGMT1RkNlgYzJSQjec43GMUzcQcCqaKTM5SRkZCeTgDn6uOyic"
+                                alt="">
+                        </div>
+                        <div>
+                            <span>
+                                <h2>Песто</h2>
+                                <p class="wrap_span"><span class="price_p">290</span> руб.</p>
+                            </span>
+                            <p class="opis">Цыпленок, ветчина, соус ранч, моцарелла, томаты, чеснок
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pizz">
+                        <div class="click_box">
+                            <span class="select_pizz"></span>
+                            <img class="img_pizza"
+                                src="https://uno.ufabike.ru/images/pizza/rezcrop/pizza_ciplenok.png"
+                                alt="">
+                        </div>
+                        <div>
+                            <span>
+                                <h2>Цыпленок барбекю</h2>
+                                <p class="wrap_span"><span class="price_p">410</span> руб.</p>
+                            </span>
+                            <p class="opis">Цыпленок, бекон, соус барбекю, красный лук, моцарелла, томатный соус
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pizza_line">
+                    <div class="pizz">
+                        <div class="click_box">
+                            <span class="select_pizz"></span>
+                            <img class="img_pizza"
+                                src="https://sun9-44.userapi.com/impf/c856024/v856024297/1e79ed/guML2mnXFx4.jpg?size=604x604&quality=96&sign=82e749b86cd9b8a1237513c07b05e2e9"
+                                alt="">
+                        </div>
+                        <div>
+                            <span>
+                                <h2>Цыпленок ранч</h2>
+                                <p class="wrap_span"><span class="price_p">340</span> руб.</p>
+                            </span>
+                            <p class="opis">Пикантная пепперони, увеличенная порция моцареллы, томатный соус
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pizz">
+                        <div class="click_box">
+                            <span class="select_pizz"></span>
+                            <img src="https://img.favpng.com/12/2/5/sushi-pizza-italian-cuisine-makizushi-japanese-cuisine-png-favpng-tTNHKE7HF1yLAZ2YFt9zBy3bs.jpg"
+                                alt="">
+                        </div>
+                        <div>
+                            <span>
+                                <h2>Супермясная</h2>
+                                <p class="wrap_span"><span class="price_p">365</span> руб.</p>
+                            </span>
+                            <p class="opis">Пикантная пепперони, цыпленок, острая чоризо, бекон, митболы из говядины,
+                                моцарелла, томатный соус
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pizz">
+                        <div class="click_box">
+                            <span class="select_pizz"></span>
+                            <img src="https://62.2233747.ru/upload/shop_1/2/3/6/item_236/shop_property_file_236_80.jpg"
+                                alt="">
+                        </div>
+                        <div>
+                            <span>
+                                <h2>Аррива!</h2>
+                                <p class="wrap_span"><span class="price_p">270</span> руб.</p>
+                            </span>
+                            <p class="opis">Бекон, митболы из говядины, пикантная пепперони, моцарелла, томаты черри,
+                                шампиньоны, сладкий перец, красный лук, чеснок, томатный соус
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pizza_line">
+                    <div class="pizz">
+                        <div class="click_box">
+                            <span class="select_pizz"></span>
+                            <img src="https://s3.eu-north-1.amazonaws.com/restoraids/media/pizza-1.png" alt="">
+                        </div>
+                        <div>
+                            <span>
+                                <h2>Цезарь</h2>
+                                <p class="wrap_span"><span class="price_p">320</span> руб.</p>
+                            </span>
+                            <p class="opis">Острый цыпленок, острый перец халапеньо, соус сальса, томаты, сладкий перец,
+                                красный лук, моцарелла, томатный соус
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pizz">
+                        <div class="click_box">
+                            <span class="select_pizz"></span>
+                            <img src="https://cdn-ru.bitrix24.ru/b16388422/landing/0aa/0aa4aa5ce98a097f5e7e5311b8950764/rimskaya-1200x1200_1x.png"
+                                alt="">
+                        </div>
+                        <div>
+                            <span>
+                                <h2>Чизбургер-пицца</h2>
+                                <p class="wrap_span"><span class="price_p">415</span> руб.</p>
+                            </span>
+                            <p class="opis">Бекон, сыры чеддер и пармезан, моцарелла, томаты черри, красный лук, чеснок,
+                                соус альфредо, итальянские травы
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pizz">
+                        <div class="click_box">
+                            <span class="select_pizz"></span>
+                            <img src="https://im0-tub-ru.yandex.net/i?id=0fb76167e532d357b743c631e70a1cd0-l&n=13"
+                                alt="">
+                        </div>
+                        <div>
+                            <span>
+                                <h2>Ветчина и сыр</h2>
+                                <p class="wrap_span"><span class="price_p">350</span> руб.</p>
+                            </span>
+                            <p class="opis">Ветчина, сыр чеддер, сладкий перец, моцарелла, томатный соус, чеснок,
+                                итальянские травы
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <%- include ('blocks/footer'); -%>
+</body>
+
+</html>

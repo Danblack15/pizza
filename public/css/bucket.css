@@ -1,0 +1,313 @@
+.modal_zakaz{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background: #0000003a;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.enter_modal_zakaz{
+    width: 900px;
+    height: 600px;
+    border-radius: 15px;
+    background: white;
+}
+.block_1{
+    max-width: 70vw;
+    margin: 70px auto;
+    margin-bottom: 70px;
+}
+.name_block{
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+}
+.name_block p{
+    padding: 7px;
+}
+.pop_up_buc{
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    right: 0;
+    top: 0;
+    margin: 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.enter_pop_buc{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+.enter_pop_buc::-webkit-scrollbar{
+    width: 10px;
+    
+}
+.enter_pop_buc::-webkit-scrollbar-button {
+    display: none;
+    
+}
+.enter_pop_buc::-webkit-scrollbar-track {
+    background: rgb(80, 66, 61);
+    
+}
+.enter_pop_buc::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color:black;
+
+}
+.logo_block img{
+    width: 60px;
+    margin-left: 50px;
+    transform: rotate(0deg);
+
+    animation-name: logo_block;
+    animation-duration: 7s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes logo_block {
+    0%{
+
+    }
+    30%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.buck{
+    cursor: pointer;
+}
+.buck:hover{
+    background: #d1d1d1;
+}
+.line_pop_up{
+    width: 600px;
+    height: 200px;
+    display: flex;
+    margin: 10px auto;
+    border: 1px solid #dbdbdb;
+    background: white;
+}
+.img_pizza_pop{
+    width: 37%;
+    /*background-image: url('/public/svg/pizza.svg');
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;*/
+}
+.info_pizza{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.delete_p{
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mon_p{
+    margin-top: 15px;
+    margin-bottom: -15px;
+    color: orangered;
+    font-weight: bold;
+    font-size: 20px;
+}
+.del{
+    background-image: url('/public/svg/delete.svg');
+    background-position: center;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.name_p_pop{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+.schet{
+    font-size: 25px;
+    font-weight: bold;
+    transform: translateY(50%);
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+.schet p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.schet span{
+    padding: 0 10px;
+}
+.minus, .plus{
+    font-size: 30px;
+    transition: 0.1s;
+    cursor: pointer;
+    display: block;
+}
+.plus:hover{
+    transform: scale(1.3);
+    transition: 0.1s;
+}
+.minus:hover{
+    transform: scale(1.3);
+    transition: 0.1s;
+}
+.img_pizza_pop img{
+    height: 100%;
+    margin-left: 30px;
+}
+.name_company{
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    margin-top: 60px;
+}
+.name_company p{
+    font-family: 'Caveat', cursive;
+    background: linear-gradient(45deg, #ff4d00 33%, #ffb700 66%, #cf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0B2349;
+  display: table;
+}
+.general_info_price{
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    font-size: 45px;
+    justify-content: space-around;
+    align-items: center;
+}
+.general_info_price div:nth-child(1){
+    display: flex;
+}
+.general_info_price input{
+    width: 130px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff4d009f 33%, #ffb7009f 66%, #ccff009e);
+    border: 0;
+    outline: 0;
+}
+.general_info_price input:hover{
+    background: linear-gradient(45deg, #ff4d00 33%, #ffb700 66%, #cf0);
+}
+.money{
+    margin-left: 8px;
+    font-weight: bold;
+    color: orangered;
+}
+section{
+    min-height: 95%;
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+    
+}
+body::-webkit-scrollbar-button {
+    display: none;
+    
+}
+body::-webkit-scrollbar-track {
+    background: black;
+    
+}
+body::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color:orangered;
+
+}
+.pusto{
+    font-size: 60px;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    color: #3b3b3b;
+}
+.name_modal{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    padding: 15px 0;
+    background: linear-gradient(45deg, #ff4d00 33%, #ffb700 66%, #cf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0B2349;
+  display: table;
+}
+.enter_modal_zakaz form{
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper_textarea{
+    background: green;
+    width: 57%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.enter_modal_zakaz form input{
+    width: 250px;
+    height: 35px;
+    font-size: 20px;
+    margin: 15px 40px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.enter_modal_zakaz textarea{
+    width: 100%;
+    min-width: 100%;
+    max-height: 150px;
+    min-height: 150px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.enter_modal_zakaz input[type=submit]{
+    background: linear-gradient(45deg, #ff4d009f 33%, #ffb7009f 66%, #ccff009e);
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
+}
+.enter_modal_zakaz input[type=submit]:hover{
+    background: linear-gradient(45deg, #ff4d00 33%, #ffb700 66%, #cf0);
+}
